@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+define(['jquery', 'jquery/validate'], function($) {
     'use strict';
 
     return function() {
@@ -38,6 +38,8 @@ define(['jquery'], function($) {
                 return true;
             },
             $.mage.__('File is not an image.')
-        )
+        );
+
+        return $.mage.validation;
     }
 });
